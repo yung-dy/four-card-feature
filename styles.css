@@ -4,14 +4,23 @@
     /* font properties - family, size, weight, style, variant, height*/
     --ff: "Poppins", sans-serif;
     --fs: 0.875rem;
+    --fm: 1.5rem;
+    --rad1: 1rem;
+    --rad2: 0.5rem;
 
     /* spacing - letter, word */
     --ls: 2.5rem;
-    --m: 1.5rem;
+    --m: 1rem;
+    --mm: 2rem;
+    --ml: 3rem;
 
     /* Text-appearance - color, text-transform, decoration, align, vertical-align, white-space */
     --c1: hsl(234, 12%, 34%);
-    --bc: hsl(0, 0%, 100%);
+    --bc: hsl(0, 0%, 99%);
+    --bt1: hsl(0, 78%, 62%);
+    --bt2: hsl(180, 62%, 55%);
+    --bt3: hsl(34, 97%, 64%);
+    --bt4: hsl(212, 86%, 64%);
 }
 
 * {
@@ -24,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--ff);
-    background-color: ;
+    background-color: var(--bc);
     color: var(--c1);
     align-items: center;
     justify-content: center;
@@ -44,13 +53,55 @@ header h1 {
     font-weight: 200;
     line-height: var(--ls);
     margin-block-end: var(--m);
+    font-size: var(--fm);
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: var(--fs);
     font-weight: 400;
-    margin-block-end: var(--m);
+    margin-block-end: var(--ml);
 }
+
+main  {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block-start: 4rem;
+}
+
+.box {
+    background-color: #ffffff;
+    border-radius: var(--rad2);
+    margin-block-end: var(--ml);
+    padding: var(--fm);
+    text-align: right;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.box-text {
+    text-align: left;
+}
+
+.box-text h2 {
+    font-size: 1.5rem;
+    margin-block-end: 0.5rem;
+}
+
+.box1 {
+    border-top: 4px solid var(--bt2);
+}
+
+.box2 {
+    border-top: 4px solid var(--bt1);
+}
+
+.box3 {
+    border-top: 4px solid var(--bt3);
+}
+
+.box4 {
+    border-top: 4px solid var(--bt4);
+}
+
 
 
 .attribution { font-size: 11px; text-align: center; }
