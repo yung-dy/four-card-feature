@@ -4,7 +4,7 @@
     /* font properties - family, size, weight, style, variant, height*/
     --ff: "Poppins", sans-serif;
     --fs: 0.875rem;
-    --fm: 1.5rem;
+    --fm: 1.65rem;
     --rad1: 1rem;
     --rad2: 0.5rem;
 
@@ -42,7 +42,7 @@ body {
 
 .container {
     max-width: 37.5rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
 }
 
 header {
@@ -52,19 +52,24 @@ header {
 header h1 {
     font-weight: 200;
     line-height: var(--ls);
-    margin-block-end: var(--m);
     font-size: var(--fm);
 }
 
-p {
+header h2 {
+    font-weight: 700;
+    font-size: var(--fm);
+    margin-block-end: var(--m);
+}
+
+header p {
     font-size: var(--fs);
     font-weight: 400;
-    margin-block-end: var(--ml);
+    margin: 0 auto;
+    max-width: 34rem;
+    text-align: center;
 }
 
 main  {
-    display: grid;
-    grid-template-columns: 1fr;
     margin-block-start: 4rem;
 }
 
@@ -74,11 +79,12 @@ main  {
     margin-block-end: var(--ml);
     padding: var(--fm);
     text-align: right;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .box-text {
     text-align: left;
+    margin-block-end: 3rem;
 }
 
 .box-text h2 {
@@ -87,22 +93,36 @@ main  {
 }
 
 .box1 {
-    border-top: 4px solid var(--bt2);
+    border-top: 7px solid var(--bt2);
 }
 
 .box2 {
-    border-top: 4px solid var(--bt1);
+    border-top: 7px solid var(--bt1);
 }
 
 .box3 {
-    border-top: 4px solid var(--bt3);
+    border-top: 7px solid var(--bt3);
 }
 
 .box4 {
-    border-top: 4px solid var(--bt4);
+    border-top: 7px solid var(--bt4);
 }
 
 
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 640px) {
+    /* main  {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-block-start: 4rem;
+        gap: 2rem;
+    } */
+
+    .box- {
+        
+    }
+
+
+}
