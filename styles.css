@@ -22,6 +22,7 @@
     --bt2: hsl(180, 62%, 55%);
     --bt3: hsl(34, 97%, 64%);
     --bt4: hsl(212, 86%, 64%);
+    --bt5: hsl(228, 45%, 44%);
 }
 
 * {
@@ -43,7 +44,7 @@ body {
 
 .container {
     max-width: 37.5rem;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0.5rem;
 }
 
 header {
@@ -110,21 +111,54 @@ main  {
     border-top: 7px solid var(--bt4);
 }
 
+.attribution p {
+    text-align: center;
+}
+
+.attribution p a {
+    color: var(--bt5);
+}
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@media (min-width: 720px) {
 
-@media (min-width: 640px) {
-    /* main  {
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-block-start: 4rem;
-        gap: 2rem;
-    } */
-
-    .box- {
-        
+    .container {
+        max-width: 75rem;
+        margin: 2rem 1.5rem 0;
     }
 
+    header h1, header h2{
+        font-size: 1.7rem;
+    }
+   
+    header p {
+        max-width: 37rem;
+        font-size: var(--fs);
+    }
+    
+    main  {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-block-start: 3rem;
+        gap: 1.5rem;
+    }
 
+    .box2 {
+        margin-block-end: 1.5rem;
+    }
+
+    .box1, .box4 {
+        align-self: center; 
+    }
+
+    .attribution {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        font-family: inherit;
+    }
+
+    .attribution p:first-child {
+        margin-inline-end: var(--fm);
+    }
 }
